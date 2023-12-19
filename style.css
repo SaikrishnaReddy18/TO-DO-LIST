@@ -1,0 +1,163 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,700&family=Preahvihear&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Preahvihear', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #BEE3DB,#4DA167,#E4BE9E);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+
+}
+
+.icon-img{
+    width: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.todo-app h2{
+    color: #0f0f0f;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+   
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    color: white;
+    background-color: #ff5945;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+#list-container li{
+    list-style-type: none;
+    font-size: 17px;
+    padding: 12px 8px 18px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./images/unchecked-To\ do.png");
+    top: 12px;
+    left: 12px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("./images/checked\ ToDo.png");
+
+}
+ul li span{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    margin: 5px;
+    color:#555;
+    text-align: center;
+    border-radius: 50%;
+   
+    
+    
+}
+ul li span:hover{
+    background-color: white;
+    border-radius: 50%;
+    font-size: 0px;
+    background-image: url("./images/delete2.jpg"); 
+    background-size: cover;
+    background-position: center center;
+    
+
+}
+
+#btn:active{
+    transform: scale(0.9);
+    
+}
+span{
+    box-shadow: 2px 2px 2px #555;
+}
+span:active{
+    transform: translate(0.9);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .todo-app {
+        width: 90%; 
+        margin: 50px auto 20px;
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column; 
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+
+    .row input {
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+    }
+
+    .row button {
+        padding: 12px 30px; 
+        font-size: 14px;
+    }
+
+    #list-container li {
+        padding: 8px 8px 12px 40px; 
+    }
+}
+
+  
+ 
+  
+  
